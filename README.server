@@ -1,0 +1,9 @@
+The URL for the remote server is :
+
+https://rps.cscvr.umassd.edu:8000
+
+This is accessible from off-campus. Please note that there is a glitch
+on the server side. When first logging on, your home directory has not
+yet been created. So you may need to log on, log off, quit your browser, 
+wait a few minutes, and then log on again. After this, all should work
+seamlessly.
