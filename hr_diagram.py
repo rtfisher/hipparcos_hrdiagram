@@ -59,8 +59,8 @@ def is_number (s):
 #======================================================================
 #
 # generate_plot: Generates an HR diagram in PDF format, given stellar
-#  data input in ASCII format. Two strings are taken as arguments: 
-#  the data file string inputfile, and the PDF output filename outputfile.
+#  data input in ASCII format. One string is taken as argument: 
+#  the data file string inputfile.
 #
 #  The data is assumed to be in column form,
 #  divided by vertical bars, like so: 
@@ -71,12 +71,12 @@ def is_number (s):
 # Vmag is the stellar magnitude in Johnson V band filter, Plx is the 
 # parallax _in milliarcseconds_, and B-V is the Jonson B-V band color. 
 # The code converts to arcseconds for the parallax, displays the HR
-# diagram to the Jupyter notebook, and outputs a PDF file with the 
-# HR diagram.
+# diagram to the Jupyter notebook.
 #
 #========================================================================= 
 
-def generate_plot (inputfile, outputfile):
+# def generate_plot (inputfile, outputfile):
+def generate_plot (inputfile):
 
 # Open data file for reading
 
@@ -135,5 +135,5 @@ def generate_plot (inputfile, outputfile):
   plt.ylim (-5, 20.)
   ax.set_ylim(ax.get_ylim()[::-1])
   ax.set_aspect(1./4.)
-  plt.savefig (outputfile, format = 'pdf')
+#  plt.savefig (outputfile, format = 'pdf')
   plt.show()
