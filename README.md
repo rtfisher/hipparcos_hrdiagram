@@ -1,5 +1,7 @@
 # Hipparcos HR Diagram
 
+This repository supports an introduction to astrophysics course for physics majors homework exercise in which students construct Hertzsprung-Russell diagrams using real stellar data from the Hipparcos space telescope mission. Students write Python code to compute absolute magnitudes from parallax measurements and generate HR diagrams for both apparent-magnitude-limited and distance-limited samples of stars.
+
 ## Running in a GitHub Codespace
 
 1. On the repository page, click **Code > Codespaces > Create codespace on master**.
