@@ -123,11 +123,22 @@ def generate_plot (inputfile):
             color = float (colorstr)
             bminusv.append (color)
 
-# Generate plot. We set the V and B-V limits of the plot as well as the 
+# Generate plot. We set the V and B-V limits of the plot as well as the
 #  aspect ratio. Show to Jupyter notebook (see 'matplotlib inline') command
 #  above, and also output to PDF file.
 
-  plt.plot (bminusv, MV, 'ko', markersize = 1)
+# Colorize each point by B-V using the RdYlBu_r colormap (blue->red).
+# The normalization clamps B-V to [-0.5, 2.5] and maps that range to [0,1].
+# This is suggestive of stellar color temperature (hot=blue, cool=red) but
+# not physically accurate: true stellar hues derived from blackbody spectra
+# span a narrower gamut (pale blue-white through yellow to orange-red), while
+# the colormap exaggerates saturation for visual clarity.
+
+  bv_arr = np.array (bminusv)
+  bv_norm = np.clip ((bv_arr - (-0.5)) / (2.5 - (-0.5)), 0.0, 1.0)
+  colors = plt.cm.RdYlBu_r (bv_norm)
+
+  plt.scatter (bminusv, MV, c = colors, s = 2, linewidths = 0)
   plt.xlabel ('B Minus V Color')
   plt.ylabel ("V Magnitude")
   ax = plt.gca()
