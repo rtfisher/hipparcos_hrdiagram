@@ -12,7 +12,7 @@ This repository supports an introduction to astrophysics course for physics majo
 
 ## Closing a Codespace
 
-Go to [github.com/codespaces](https://github.com/codespaces), click **...** next to your codespace, and select **Stop codespace**.
+When you are done working for the day, stop your codespace to avoid unnecessary resource usage. Go to [github.com/codespaces](https://github.com/codespaces), click **...** next to your codespace, and select **Stop codespace**.
 
 > **Warning:** Do NOT select **Delete** — this permanently destroys all your work with no recovery.
 
