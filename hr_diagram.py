@@ -26,8 +26,7 @@ verbose = 0
 
 #======================================================================
 # absolute_magnitude:  Return absolute magnitude of a star given its
-#  visual magnitude and parallax (in arcseconds). 
-#  parallax (in arcseconds).
+#  apparent visual magnitude and parallax (in arcseconds).
 #
 #======================================================================
 #
